@@ -9,6 +9,14 @@ ActiveAdmin.register Note do
     end
     f.actions
   end
+
+  show title: "Your Note" do
+    h1 link_to note.title, admin_notes_path
+    h4 link_to note.subject.name, admin_subject_path(note.subject)
+    div(class: 'note-body') do
+      raw note.body
+    end
+  end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
