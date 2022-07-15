@@ -13,9 +13,24 @@ ActiveAdmin.register Note do
   show title: "Your Note" do
     h1 link_to note.title, admin_notes_path
     h4 link_to note.subject.name, admin_subject_path(note.subject)
-    div(class: 'note-body') do
+    div(class: "note-body") do
       raw note.body
     end
+  end
+
+  index do
+    selectable_column
+    column :id
+    column :subject
+    column "Title" do |note|
+      link_to note.title, admin_note_path(note)
+    end
+    column "Body" do |note|
+      raw note.body.truncate_words(20)
+    end
+    column :created_at
+    column :updated_at
+    actions
   end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
