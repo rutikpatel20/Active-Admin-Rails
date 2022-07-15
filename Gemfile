@@ -58,3 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "activeadmin", "~> 2.13"
 
 gem "devise", "~> 4.8"
+
+# Active Admin Plugin >> WYSIWYG Editor >> Quill Editor
+gem 'activeadmin_quill_editor'

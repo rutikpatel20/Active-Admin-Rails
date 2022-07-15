@@ -48,6 +48,8 @@ GEM
       kaminari (~> 1.0, >= 1.2.1)
       railties (>= 6.1, < 7.1)
       ransack (>= 2.1.1, < 4)
+    activeadmin_quill_editor (1.0.0)
+      activeadmin (~> 2.0)
     activejob (6.1.6.1)
       activesupport (= 6.1.6.1)
       globalid (>= 0.3.6)
@@ -265,6 +267,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 2.13)
+  activeadmin_quill_editor
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)

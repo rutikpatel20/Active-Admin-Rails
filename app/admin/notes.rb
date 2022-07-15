@@ -5,7 +5,7 @@ ActiveAdmin.register Note do
     f.inputs "Note" do
       f.input :subject
       f.input :title, placeholder: "Enter Title Here"
-      f.input :body
+      f.input :body, as: :quill_editor
     end
     f.actions
   end
