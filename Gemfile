@@ -61,3 +61,6 @@ gem "devise", "~> 4.8"
 
 # Active Admin Plugin >> WYSIWYG Editor >> Quill Editor
 gem 'activeadmin_quill_editor'
+
+# Arctic Admin Theme
+gem 'arctic_admin'
