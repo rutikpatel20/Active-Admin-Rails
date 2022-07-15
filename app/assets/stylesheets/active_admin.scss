@@ -12,6 +12,7 @@
 @import "active_admin/base";
 @import 'activeadmin/quill_editor/quill.snow';
 @import 'activeadmin/quill_editor_input';
+@import "active_material/src/stylesheets/active_material.scss";
 
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
