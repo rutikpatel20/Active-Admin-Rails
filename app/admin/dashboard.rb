@@ -10,24 +10,35 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    # Here is an example of a simple dashboard with columns and panels.
-    #
-    # columns do
-    #   column do
-    #     panel "Recent Posts" do
-    #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
-    #         end
-    #       end
-    #     end
-    #   end
+    columns do
+      column do
+        panel "Recent Notes" do
+          ul do
+            Note.order(created_at: :desc).first(5).map do |note|
+              li link_to(note.title, admin_note_path(note))
+            end
+          end
+        end
+      end
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
-    # end
+      column do
+        panel "Owner's Message" do
+          para "Welcome To My Notes Taking Application"
+          h3 "Made By Rutvik Patel"
+        end
+      end
+    end
+
+    columns do
+      column do
+        panel "Subjects" do
+          ul do
+            Subject.order(name: :asc).first(5).map do |subject|
+              li link_to(subject.name, admin_subject_path(subject))
+            end
+          end
+        end
+      end
+    end
   end # content
 end
